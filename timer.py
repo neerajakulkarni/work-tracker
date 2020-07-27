@@ -84,7 +84,7 @@ def job():
 
     cursor.execute(app_sql)
 
-    cursor.execute('''INSERT INTO TimeTracker (day, timespenttotal) VALUES(?, ?)''', (today, strtotal)
+    cursor.execute('''INSERT INTO TimeTracker (day, timespenttotal) VALUES(?, ?)''', (today, strtotal))
 
     for k, v in finalist.items():
         cursor.execute("INSERT INTO AppTracker (appname, timespentapp) VALUES(?, ?)", (k, v))
